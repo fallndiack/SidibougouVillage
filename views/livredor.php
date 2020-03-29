@@ -4,7 +4,6 @@
 use App\Guestbook\{
     GuestBook,
     Message
-
 };
 
 
@@ -28,6 +27,11 @@ $messages = $guestbook->getMessages();
 $title = "Livre d'or";
 
 ?>
+<style>
+    .main_nav {
+        display: none;
+    }
+</style>
 
 
 <div class="container">
@@ -69,6 +73,3 @@ $title = "Livre d'or";
     <?php endif ?>
 
 </div>
-
-
-

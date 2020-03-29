@@ -6,38 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?= isset($title) ? e($title) : 'Sidi Bougou village' ?></title>
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/calendar.css">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="carousselstyle.css">
 
+
+    <!-- jquery cdn -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"></script>
 
 
 </head>
 
 <body class="d-flex flex-column h-100">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a href="<?= $router->url('home') ?>" class="navbar-brand">Sidi Bougou Village</a>
+    <div class="container-fluid">
+        <div class="row mb-5">
+            <div class="col-md-12 navbar navbar-expand-lg navbar-dark bg-primary">
+                <a href="<?= $router->url('home') ?>" class="navbar-brand">Sidi Bougou Village</a>
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a href="<?= $router->url('post_archive') ?>" class="nav-link">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="<?= $router->url('livredor') ?>" class="nav-link">Livre d'or</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="<?= $router->url('calendrier') ?>" class="nav-link">Evenements à venir</a>
+                    </li>
 
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a href="<?= $router->url('post_archive') ?>" class="nav-link">Blog</a>
-            </li>
-            <li class="nav-item">
-                <a href="<?= $router->url('livredor') ?>" class="nav-link">Livre d'or</a>
-            </li>
-            <li class="nav-item">
-                <a href="<?= $router->url('calendrier') ?>" class="nav-link">Evenements à venir</a>
-            </li>
+                    <li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Portfolio</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
+                </ul>
+            </div>
 
-        </ul>
-    </nav>
 
-    <div class="container mt-4">
+        </div>
+
+      
+    </div>
+
+    <div class="mt-5">
 
         <?= $content ?>
 
     </div>
+
+
+    <!-- scripts -->
+    <!-- bootstrap javascript cdn -->
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+
+
+
+
 
     <footer class="bg-light py-4 footer mt-auto">
 
